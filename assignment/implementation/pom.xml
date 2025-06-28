@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.fontysvenlo</groupId>
+        <artifactId>sortingserviceparent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+    <groupId>io.github.fontysvenlo.sortingservice</groupId>
+    <artifactId>sortingservice</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>asortingservice-impl</name>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <sebi.sorters>SELECTION INSERTION</sebi.sorters>
+        <surefire.timeout>20</surefire.timeout>
+        <surefire.opens>
+            <!-- add add-opens lines for **ALL** packages in your module that are tested.
+                    For testing it is fine to open your packages for the whole world, which includes
+                    e.g. junit, assertj, mockito, and jacoco, to name a few.
+                    Also leave ${argLine} because it is set/used by the coverage plugin.
+            -->
+            ${argLine}
+        </surefire.opens>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>io.github.fontysvenlo.sortingservice</groupId>
+            <artifactId>api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+            <type>jar</type>
+        </dependency>
+    </dependencies>
+</project>
